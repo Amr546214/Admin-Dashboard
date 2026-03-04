@@ -1,0 +1,94 @@
+.header {
+  height: 56px;
+  padding: 0 var(--space-5);
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.searchWrap {
+  flex: 1;
+  max-width: 320px;
+}
+
+.search {
+  width: 100%;
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-10);
+  font-size: 0.9375rem;
+  color: var(--text);
+  background: var(--bg-page);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s;
+}
+.search::placeholder {
+  color: var(--text-light);
+}
+.search:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.searchIconWrap {
+  position: relative;
+}
+.searchIconWrap::before {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'/%3E%3C/svg%3E") center/contain no-repeat;
+  pointer-events: none;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdownBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.9375rem;
+  border-radius: 8px;
+}
+.dropdownBtn:hover {
+  background: var(--bg-page);
+}
+
+@media (max-width: 768px) {
+  .searchWrap {
+    max-width: 180px;
+  }
+}

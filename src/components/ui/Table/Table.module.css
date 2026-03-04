@@ -1,0 +1,65 @@
+.wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-card);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+
+.th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-page);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.tr:hover .td {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.zebra .tr:nth-child(even) .td {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.zebra .tr:nth-child(even):hover .td {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+.sortable:hover {
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.empty {
+  padding: var(--space-10);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
