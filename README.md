@@ -1,16 +1,23 @@
-# React + Vite
+# Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React dashboard demo for managing users and products and reviewing orders. It showcases reusable data tables, filters, pagination, forms, confirmation dialogs, skeletons, and toast feedback.
 
-Currently, two official plugins are available:
+![Admin Dashboard overview populated with demo data](docs/images/preview.webp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run locally
 
-## React Compiler
+Use Node.js 22.12+ and npm.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm ci
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the URL printed by Vite. For the demo sign-in, use a fictional email such as `demo@example.com` and any nonempty demo password. Sign-in is simulated in the browser. [The mock API](src/services/api.js) stores records in memory, so refreshing resets edits. No backend or environment file is needed.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Command | Purpose |
+| --- | --- |
+| `npm run build` | Generate the static build |
+| `npm run lint` | Run ESLint |
+
+**Stack:** React, React Router, Vite, and CSS Modules. See [`src/components/ui/`](src/components/ui/) for reusable controls and [`src/pages/`](src/pages/) for feature screens.
